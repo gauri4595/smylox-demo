@@ -3,186 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMYLOX - Electric Brushing</title>
+  <title>GlowCart - Demo Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9fafc;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins', sans-serif; background:#f6f7fb; }
 
     header {
-      background: #0b1c3d;
-      color: white;
-      padding: 18px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background:white;
+      padding:15px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
     }
 
-    header h1 { font-weight: 600; letter-spacing: 2px; }
+    header h1 { color:#6c5ce7; }
 
     nav a {
-      color: white;
-      margin-left: 25px;
-      text-decoration: none;
-      font-size: 14px;
+      margin-left:25px;
+      text-decoration:none;
+      color:#333;
+      font-size:14px;
     }
 
     .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px;
-      background: linear-gradient(120deg, #e6d2b5, #f7efe5);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:60px;
+      background:linear-gradient(120deg,#dfe9ff,#f5f7ff);
     }
 
-    .hero-text {
-      max-width: 45%;
-    }
+    .hero-text h2 { font-size:40px; margin-bottom:15px; }
+    .hero-text p { color:#555; margin-bottom:20px; }
 
-    .hero-text h2 {
-      font-size: 42px;
-      color: #0b1c3d;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    .hero-text button {
-      padding: 12px 28px;
-      background: #0b1c3d;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .hero img {
-      width: 40%;
-      border-radius: 10px;
+    .btn {
+      padding:12px 25px;
+      background:#6c5ce7;
+      color:white;
+      border:none;
+      border-radius:25px;
+      cursor:pointer;
     }
 
     .products {
-      padding: 60px;
-      text-align: center;
-    }
-
-    .products h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: #0b1c3d;
+      padding:60px;
+      text-align:center;
     }
 
     .product-grid {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
+      display:flex;
+      gap:25px;
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
     .product {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      width: 220px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: 0.3s;
+      background:white;
+      padding:20px;
+      width:220px;
+      border-radius:15px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
     }
 
-    .product:hover {
-      transform: translateY(-8px);
+    .product img { width:100%; border-radius:10px; }
+
+    .shop-section {
+      padding:60px;
+      background:#fff;
     }
 
-    .product img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+    .shop-section h2 { text-align:center; margin-bottom:40px; }
+
+    .shop-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
     }
 
-    .product h4 {
-      margin-bottom: 8px;
-      color: #222;
+    .card {
+      border:1px solid #eee;
+      padding:15px;
+      border-radius:12px;
+      transition:0.3s;
+      background:#fafafa;
     }
 
-    .product p {
-      color: #0b1c3d;
-      font-weight: 600;
-    }
+    .card:hover { transform:translateY(-5px); }
 
     footer {
-      background: #0b1c3d;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-      font-size: 14px;
+      text-align:center;
+      padding:25px;
+      background:#111;
+      color:white;
     }
-
-    @media(max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text, .hero img {
-        max-width: 100%;
-      }
-
-      .hero img { margin-top: 20px; }
-    }
-
   </style>
 </head>
 <body>
 
 <header>
-  <h1>SMYLOX</h1>
+  <h1>GlowCart</h1>
   <nav>
     <a href="#">Home</a>
-    <a href="#">Catalog</a>
+    <a href="#shop">Shop</a>
     <a href="#">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h2>Better Smiles Start Here</h2>
-    <p>Upgrade your brushing experience with premium electric toothbrushes designed for comfort, style and performance.</p>
-    <button>Shop Now</button>
+    <h2>Build Your Perfect Store</h2>
+    <p>Shopify-style modern eCommerce UI with premium product collections.</p>
+    <button class="btn" onclick="document.getElementById('shop').scrollIntoView()">Shop Now</button>
   </div>
-  <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" alt="toothbrush">
+  <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" width="350">
 </section>
 
 <section class="products">
-  <h2>Our Best Sellers</h2>
+  <h2>Trending Products</h2>
   <div class="product-grid">
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1588776814546-ec7e3dc6d67e">
-      <h4>Classic Electric Brush</h4>
-      <p>₹999</p>
+      <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+      <h4>Wireless Headphones</h4>
+      <p>₹1999</p>
     </div>
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642">
-      <h4>Soft Clean Brush</h4>
-      <p>₹799</p>
+      <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
+      <h4>Smart Watch</h4>
+      <p>₹2499</p>
     </div>
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1616627988441-9d2b0c2c8b33">
-      <h4>Premium Sonic Brush</h4>
-      <p>₹1299</p>
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+      <h4>Smartphone</h4>
+      <p>₹14999</p>
     </div>
+  </div>
+</section>
+
+<section class="shop-section" id="shop">
+  <h2>Shop Collection</h2>
+  <div class="shop-grid">
+    <div class="card"><h4>Beauty Products</h4><p>Skincare, makeup & essentials</p></div>
+    <div class="card"><h4>Electronics</h4><p>Latest gadgets & devices</p></div>
+    <div class="card"><h4>Fashion</h4><p>Trendy outfits & accessories</p></div>
+    <div class="card"><h4>Home Decor</h4><p>Make your home aesthetic</p></div>
+    <div class="card"><h4>Fitness</h4><p>Gym & wellness products</p></div>
+    <div class="card"><h4>Accessories</h4><p>Daily use stylish items</p></div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 SMYLOX. Designed for demo purpose.</p>
+  <p>© 2026 GlowCart Demo Store | Shopify UI Concept</p>
 </footer>
 
 </body>
