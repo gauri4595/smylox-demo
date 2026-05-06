@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMYLOX - Electric Brushing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafc;
+    }
+
+    header {
+      background: #0b1c3d;
+      color: white;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 { font-weight: 600; letter-spacing: 2px; }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      background: linear-gradient(120deg, #e6d2b5, #f7efe5);
+    }
+
+    .hero-text {
+      max-width: 45%;
+    }
+
+    .hero-text h2 {
+      font-size: 42px;
+      color: #0b1c3d;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero-text button {
+      padding: 12px 28px;
+      background: #0b1c3d;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .hero img {
+      width: 40%;
+      border-radius: 10px;
+    }
+
+    .products {
+      padding: 60px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #0b1c3d;
+    }
+
+    .product-grid {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 220px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product h4 {
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .product p {
+      color: #0b1c3d;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #0b1c3d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text, .hero img {
+        max-width: 100%;
+      }
+
+      .hero img { margin-top: 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SMYLOX</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Catalog</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Better Smiles Start Here</h2>
+    <p>Upgrade your brushing experience with premium electric toothbrushes designed for comfort, style and performance.</p>
+    <button>Shop Now</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" alt="toothbrush">
+</section>
+
+<section class="products">
+  <h2>Our Best Sellers</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7e3dc6d67e">
+      <h4>Classic Electric Brush</h4>
+      <p>₹999</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642">
+      <h4>Soft Clean Brush</h4>
+      <p>₹799</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1616627988441-9d2b0c2c8b33">
+      <h4>Premium Sonic Brush</h4>
+      <p>₹1299</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 SMYLOX. Designed for demo purpose.</p>
+</footer>
+
+</body>
+</html>
